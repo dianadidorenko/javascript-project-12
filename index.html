@@ -125,9 +125,13 @@
       }
 
       function createItem(item) {
-        itemsArray.push(item.value);
-        localStorage.setItem("items", JSON.stringify(itemsArray));
-        location.reload();
+        if (item.value.length == "") {
+          alert("Enter a task, please. Input can't be empty!");
+        } else {
+          itemsArray.push(item.value);
+          localStorage.setItem("items", JSON.stringify(itemsArray));
+          location.reload();
+        }
       }
 
       function deleteItem(i) {
