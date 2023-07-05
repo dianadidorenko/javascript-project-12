@@ -13,7 +13,7 @@ body {
   padding: 40px;
   border: 1px solid rgb(61, 151, 151);
   -webkit-box-shadow: 0px 0px 15px rgb(254, 254, 254);
-          box-shadow: 0px 0px 15px rgb(254, 254, 254);
+  box-shadow: 0px 0px 15px rgb(254, 254, 254);
   border-radius: 10px;
   max-width: 450px;
   margin: 50px;
@@ -33,11 +33,11 @@ ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-column-gap: 10px;
-     -moz-column-gap: 10px;
-          column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
 }
 
 .to-do-input {
@@ -45,11 +45,11 @@ ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-column-gap: 10px;
-     -moz-column-gap: 10px;
-          column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
 }
 
 #tasks {
@@ -58,8 +58,8 @@ ul {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding: 0 50px;
 }
 
@@ -67,8 +67,9 @@ ul {
   padding: 5px 10px;
   border-radius: 10px;
   outline: 1px solid crimson;
+  -webkit-outline: 1px solid crimson;
   -webkit-box-shadow: 0px 0px 5px 0px white;
-          box-shadow: 0px 0px 5px 0px white;
+  box-shadow: 0px 0px 5px 0px white;
 }
 
 #item::-webkit-input-placeholder {
@@ -102,7 +103,7 @@ ul {
   background-color: crimson;
   color: white;
   -webkit-box-shadow: 0px 0px 10px 0px white;
-          box-shadow: 0px 0px 10px 0px white;
+  box-shadow: 0px 0px 10px 0px white;
 }
 
 #enter::-webkit-input-placeholder {
@@ -146,11 +147,11 @@ ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-column-gap: 10px;
-     -moz-column-gap: 10px;
-          column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
 }
 
 .theme {
@@ -161,7 +162,7 @@ ul {
   padding: 10px;
 }
 
-input[type=radio]::before {
+input[type="radio"]::before {
   content: "";
   position: absolute;
   top: 40%;
@@ -170,12 +171,12 @@ input[type=radio]::before {
   height: 13px;
   border-radius: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   background-color: rgb(136, 136, 136);
   border: 2px solid white;
 }
 
-input[type=radio]:checked::after {
+input[type="radio"]:checked::after {
   content: "";
   position: absolute;
   top: 40%;
@@ -185,7 +186,7 @@ input[type=radio]:checked::after {
   border-radius: 50%;
   background-color: grey;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   visibility: visible;
 }
 
@@ -201,18 +202,18 @@ input[type=radio]:checked::after {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-column-gap: 10px;
-     -moz-column-gap: 10px;
-          column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
   -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1px solid rgb(61, 151, 151);
-          order: 1px solid rgb(61, 151, 151);
+  -ms-flex-order: 1px solid rgb(61, 151, 151);
+  order: 1px solid rgb(61, 151, 151);
   border-radius: 10px;
   padding: 10px;
   -webkit-box-shadow: 0px 0px 10px rgb(254, 254, 254);
-          box-shadow: 0px 0px 10px rgb(254, 254, 254);
+  box-shadow: 0px 0px 10px rgb(254, 254, 254);
   font-size: 16px;
 }
 
