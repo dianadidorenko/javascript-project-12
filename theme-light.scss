@@ -3,35 +3,28 @@ body {
   color: #333;
   position: relative;
 }
-
 .wrapper {
   padding: 40px;
   border: 1px solid rgb(231, 97, 9);
-  -webkit-box-shadow: 0px 0px 15px rgb(254, 254, 254);
-          box-shadow: 0px 0px 15px rgb(254, 254, 254);
+  box-shadow: 0px 0px 15px rgb(254, 254, 254);
   border-radius: 10px;
   max-width: 450px;
   margin: 50px;
 }
-
 #enter {
   padding: 10px 15px;
   border-radius: 10px;
   background-color: darkgreen;
   color: white;
-  -webkit-box-shadow: 0px 0px 10px 0px white;
-          box-shadow: 0px 0px 10px 0px white;
+  box-shadow: 0px 0px 10px 0px white;
 }
-
 #item {
   padding: 5px 10px;
   border-radius: 10px;
   outline: 1px solid darkgreen;
-  -webkit-box-shadow: 0px 0px 5px 0px white;
-          box-shadow: 0px 0px 5px 0px white;
+  box-shadow: 0px 0px 5px 0px white;
 }
-
-input[type=radio] {
+input[type="radio"] {
   position: relative;
   height: 10px;
   width: 10px;
@@ -41,8 +34,7 @@ input[type=radio] {
   outline: none;
   cursor: pointer;
 }
-
-input[type=radio]::before {
+input[type="radio"]::before {
   content: "";
   position: absolute;
   top: 30%;
@@ -50,13 +42,11 @@ input[type=radio]::before {
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   background-color: rgb(243, 139, 70);
   border: 2px solid white;
 }
-
-input[type=radio]:checked::after {
+input[type="radio"]:checked::after {
   content: "";
   position: absolute;
   top: 30%;
@@ -65,53 +55,38 @@ input[type=radio]:checked::after {
   height: 13px;
   border-radius: 50%;
   background-color: rgb(184, 76, 4);
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   visibility: visible;
 }
-
 .addBtn {
   padding: 5px 15px;
   border-radius: 10px;
   border: 1px solid rgb(231, 97, 9);
-  -webkit-box-shadow: 0px 0px 10px rgb(254, 254, 254);
-          box-shadow: 0px 0px 10px rgb(254, 254, 254);
+  box-shadow: 0px 0px 10px rgb(254, 254, 254);
   background-color: rgb(231, 97, 9);
   color: white;
 }
-
 #clear {
   padding: 5px 15px;
   border-radius: 10px;
   border: 1px solid rgb(231, 97, 9);
-  -webkit-box-shadow: 0px 0px 10px rgb(254, 254, 254);
-          box-shadow: 0px 0px 10px rgb(254, 254, 254);
+  box-shadow: 0px 0px 10px rgb(254, 254, 254);
   background-color: rgb(231, 97, 9);
   color: white;
 }
-
 #toDoEl {
   padding: 5px;
   border-radius: 10px;
   border: 1px solid rgb(231, 97, 9);
-  -webkit-box-shadow: 0px 0px 10px rgb(254, 254, 254);
-          box-shadow: 0px 0px 10px rgb(254, 254, 254);
+  box-shadow: 0px 0px 10px rgb(254, 254, 254);
 }
-
 li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-column-gap: 10px;
-     -moz-column-gap: 10px;
-          column-gap: 10px;
+  align-items: center;
+  column-gap: 10px;
   border: 1px solid rgb(231, 97, 9);
   border-radius: 10px;
   padding: 10px;
-  -webkit-box-shadow: 0px 0px 10px rgb(254, 254, 254);
-          box-shadow: 0px 0px 10px rgb(254, 254, 254);
+  box-shadow: 0px 0px 10px rgb(254, 254, 254);
   font-size: 16px;
 }
