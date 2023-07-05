@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" title="theme" href="#" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <meta charset="utf-8" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="theme">
+        <div>
+          <input
+            type="radio"
+            name="styler"
+            class="changeTheme"
+            data-theme="dark"
+          />
+          dark
+        </div>
+        <div>
+          <input
+            type="radio"
+            name="styler"
+            class="changeTheme"
+            data-theme="light"
+          />
+          bright
+        </div>
+      </div>
+
+      <main class="app">
+        <h1>My Todo List...</h1>
+        <div class="input-header">
+          <h1><span id="date"></span></h1>
+          <div class="to-do-input">
+            <input type="text" id="item" placeholder="Enter a task..." /><button
+              id="enter"
+            >
+              Enter
+            </button>
+          </div>
+        </div>
+        <div class="to-do-list"></div>
+      </main>
+    </div>
+    <script type="text/javascript">
+      // change background style
+      let themeColorSwitch = document.querySelectorAll(".changeTheme");
+
+      themeColorSwitch.forEach((switcher) => {
+        switcher.addEventListener("click", function () {
+          applyTheme(this.dataset.theme);
+          localStorage.setItem("theme", this.dataset.theme);
+        });
+      });
+
+      function applyTheme(themeName) {
+        let themeUrl = `theme-${themeName}.css`;
+        console.log(themeUrl);
+        document
+          .querySelector('[title="theme"]')
+          .setAttribute("href", themeUrl);
+        themeColorSwitch.forEach((switcher) => {
+          switcher.style.display = "block";
+        });
+        // document.querySelector(`[data-theme="${themeName}"]`).style.display =
+        //   "none";
+      }
+
+      let activeTheme = localStorage.getItem("theme");
+
+      if (activeTheme === null || activeTheme === "light") {
+        applyTheme("light");
+      } else if (activeTheme === "dark") {
+        applyTheme("dark");
+      }
+      // change background style
+
+      // adding tasks
+
+      date = new Date().toLocaleDateString();
+
+      const itemsArray = localStorage.getItem("items")
+        ? JSON.parse(localStorage.getItem("items"))
+        : [];
+
+      document.querySelector("#enter").addEventListener("click", () => {
+        const item = document.querySelector("#item");
+        createItem(item);
+      });
+
+      document.querySelector("#item").addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          const item = document.querySelector("#item");
+          createItem(item);
+        }
+      });
+
+      function displayItems() {
+        let items = "";
+        for (let i = 0; i < itemsArray.length; i++) {
+          items += `<div class="item">
+                <div class="input-controller">
+                  ${date} ${itemsArray[i]}
+                   <i class="fa-solid fa-check deleteBtn"></i>
+                </div>
+              </div>`;
+        }
+        document.querySelector(".to-do-list").innerHTML = items;
+        activateDeleteListeners();
+      }
+
+      function activateDeleteListeners() {
+        let deleteBtn = document.querySelectorAll(".deleteBtn");
+        deleteBtn.forEach((dB, i) => {
+          dB.addEventListener("click", () => {
+            deleteItem(i);
+          });
+        });
+      }
+
+      function createItem(item) {
+        itemsArray.push(item.value);
+        localStorage.setItem("items", JSON.stringify(itemsArray));
+        location.reload();
+      }
+
+      function deleteItem(i) {
+        itemsArray.splice(i, 1);
+        localStorage.setItem("items", JSON.stringify(itemsArray));
+        location.reload();
+      }
+
+      window.onload = function () {
+        displayItems();
+      };
+      // adding tasks
+    </script>
+  </body>
+</html>
