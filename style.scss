@@ -43,12 +43,17 @@ ul {
 #item {
   padding: 5px 10px;
   border-radius: 10px;
-  outline: 1px solid crimson;
+  outline: none;
   box-shadow: 0px 0px 5px 0px white;
 }
 #item::placeholder {
   color: #888;
   font-weight: bold;
+}
+#item:focus {
+  border: 2px solid crimson;
+  transition: all 0.3s ease 0s;
+  caret-color: crimson;
 }
 #enter {
   padding: 10px 15px;
